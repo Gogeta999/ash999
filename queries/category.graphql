@@ -1,0 +1,15 @@
+query findCategory {
+  categoriesByName(search: "Index") {
+    id
+    name
+    notionId
+    notionType
+    isEnable
+    parentCategory {
+      id
+      name
+      notionId
+      notionType
+    }
+  }
+}

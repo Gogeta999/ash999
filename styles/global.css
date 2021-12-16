@@ -1,0 +1,72 @@
+/* ./styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
+
+/* Avoid Overlay From Notion*/
+header {
+  z-index: 30;
+}
+header.positioned {
+  position: relative;
+}
+
+button {
+  z-index: 30;
+}
+button.positioned {
+  position: relative;
+}
+
+
+div {
+  z-index: 1001;
+}
+div.positioned {
+  position: relative;
+}
+
+#nprogress .bar {
+  background: #A2DA5A !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: #edf2f7;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #A2DA5A;
+  border-radius: 100vh;
+  border: 3px solid #edf2f7;
+}
+
+/* Handle on hover
+::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+} */
