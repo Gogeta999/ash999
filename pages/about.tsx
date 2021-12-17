@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Navbar } from "../components/Navbar";
 import Image from "next/image";
 import useDarkMode from "use-dark-mode";
+import { Footbar } from "../components/Footbar";
 function About() {
   const darkMode = useDarkMode(false, { classNameDark: "dark-mode" });
 
@@ -10,6 +11,10 @@ function About() {
     <>
       <Head>
         <title>About Ash999</title>
+        <meta
+          name="description"
+          content="here is summary of my self aka about page"
+        />
       </Head>
       <Navbar />
 
@@ -42,6 +47,7 @@ function About() {
           </p>
         </div>
       </section>
+      <Footbar />
     </>
   );
 }

@@ -35,14 +35,18 @@ export const Navbar = () => {
       ></meta>
       <header className="flex w-full flex-wrap bg-purple-600 bg-opacity-50 py-2.5 ">
         <Link href="/">
-          <a className="items-center">
-            <img src="/Ash999.svg" className="fill-cover"></img>
-          </a>
+          <img
+            src="/Ash999.svg"
+            alt="Navbar default icon"
+            width="w-44"
+            height="h-14"
+          />
         </Link>
 
         <div className=" ml-auto inline-flex">
           <button
             className="p-3  hover:bg-white-300 lg:hidden text-white  hover:text-white outline-none"
+            aria-label="menu"
             onClick={handleMenuClick}
           >
             <IoMenu />
@@ -58,6 +62,7 @@ export const Navbar = () => {
           <div className="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto">
             <button
               className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center  hover:bg-evagreen"
+              aria-label="open modal"
               onClick={openModal}
             >
               <IoSearch />
@@ -74,6 +79,7 @@ export const Navbar = () => {
               <div className="border-4 flex flex-col h-screen">
                 <button
                   className="flex flex-col items-end w-full"
+                  aria-label="close modal"
                   onClick={closeModal}
                 >
                   close

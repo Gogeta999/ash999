@@ -11,6 +11,7 @@ import { Navbar } from "../components/Navbar";
 import { Sidebar } from "../components/Sidebar";
 import { initializeApollo } from "../libs/apollo-client";
 import { Footbar } from "../components/Footbar";
+import Head from "next/head";
 
 export const getStaticProps = async (context: any) => {
   try {
@@ -55,19 +56,15 @@ export default function DynamicPage({
   recordMap,
   catData,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const Modal = dynamic(
-    //@ts-ignore
-    () => import("react-notion-x").then((notion) => notion.Modal),
-    { ssr: false }
-  );
-
-  const Equation = dynamic(
-    // @ts-ignore
-    () => import("react-notion-x").then((notion) => notion.Equation)
-  );
-
   return (
     <>
+      <Head>
+        <title>Ash999 blog</title>
+        <meta
+          name="description"
+          content="For people can google to here ah, if they do require this blog"
+        />
+      </Head>
       <main className="">
         <div className="flex ">
           <Navbar />

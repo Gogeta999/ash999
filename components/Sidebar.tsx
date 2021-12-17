@@ -34,7 +34,8 @@ export const Sidebar: React.FC<types.CategoriesProps> = ({ catData }) => {
         <button
           className={`${showSidebar ? "" : "hidden"} ${
             isDarkMode ? "bg-darkBG text-darkTxt" : ""
-          }  positioned text-xs md:text-lg hover:text-evagreen `}
+          } positioned text-xs md:text-lg hover:text-evagreen `}
+          aria-label="Open"
           onMouseEnter={handleSidebar}
         >
           <FaAngleDoubleRight />
@@ -49,7 +50,7 @@ export const Sidebar: React.FC<types.CategoriesProps> = ({ catData }) => {
             onMouseLeave={handleSidebar}
           >
             <div className="text-xs md:text-lg py-2  transition duration-200 ease-in">
-              <a
+              <p
                 className={`${
                   isDarkMode ? "text-darkTxt" : ""
                 } flex flex-row  font-medium text-start text-gray uppercase`}
@@ -61,11 +62,12 @@ export const Sidebar: React.FC<types.CategoriesProps> = ({ catData }) => {
                       ? "hover:text-evagreen"
                       : "hover:text-purple-600"
                   }`}
+                  aria-label="Dropdown If have child"
                   onMouseEnter={handleDropdown}
                 >
                   <IoIosArrowDropdownCircle />
                 </button>
-              </a>
+              </p>
             </div>
 
             {catData?.allCategories.map((category) => (
