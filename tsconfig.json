@@ -22,7 +22,8 @@
     "pages/components/layout.jsx",
     "pages/components/layout.js",
     "pages/_error.js",
-    "pages/api/cors.js"
+    "pages/api/cors.js",
+    "pages/404.tsx"
   ],
   "exclude": ["node_modules"]
 }

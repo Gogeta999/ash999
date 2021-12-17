@@ -21,14 +21,14 @@ export const getStaticProps = async (context: any) => {
     });
     const catData = allCategoryFetch.data;
 
-    console.log("Context Params", context.params);
+    // console.log("Context Params", context.params);
 
     const rawPageId = context.params.pageId as string;
 
-    console.log("RawPageID", rawPageId);
+    // console.log("RawPageID", rawPageId);
 
     const pageId = parsePageId(rawPageId);
-    console.log("Parse PageID", pageId);
+    // console.log("Parse PageID", pageId);
 
     const api = new NotionAPI();
     const recordMap = await api.getPage(pageId);

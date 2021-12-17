@@ -19,7 +19,7 @@ export default function Search() {
 
   useEffect(() => {
     const delayDebounceFn = setTimeout(async () => {
-      console.log(searchValue);
+      // console.log(searchValue);
       setSearchAtive(true);
       if (searchValue.length) {
         const notionFetch = await axios({
@@ -32,7 +32,7 @@ export default function Search() {
           data: searchValue,
         }).then((res) => res.data);
         setNotionResults(notionFetch);
-        console.log("SearchRes----", searchValue, "----", notionSearchResults);
+        // console.log("SearchRes----", searchValue, "----", notionSearchResults);
         setSearchAtive(false);
       }
     }, 2000);

@@ -18,7 +18,7 @@ export const Navbar = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
   function openModal() {
     setIsOpen(true);
-    console.log("Modal Is Open", modalIsOpen);
+    // console.log("Modal Is Open", modalIsOpen);
   }
   function afterOpenModal() {
     // references are now sync'd and can be accessed.
@@ -29,17 +29,14 @@ export const Navbar = () => {
 
   return (
     <>
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-      ></meta>
-      <header className="flex w-full flex-wrap bg-purple-600 bg-opacity-50 py-2.5 ">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <header className="flex flex-1 w-full flex-wrap bg-purple-600 bg-opacity-50 py-2.5 ">
         <Link href="/">
           <img
             src="/Ash999.svg"
             alt="Navbar default icon"
-            width="w-44"
-            height="h-14"
+            width="200"
+            height="100"
           />
         </Link>
 

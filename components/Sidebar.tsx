@@ -18,14 +18,14 @@ export const Sidebar: React.FC<types.CategoriesProps> = ({ catData }) => {
 
   const handleSidebar = () => {
     setShowSidebar(!showSidebar);
-    console.log("Sidebar Open", showSidebar);
+    // console.log("Sidebar Open", showSidebar);
   };
 
   const [showDropdown, setShowDropdown] = useState(true);
 
   const handleDropdown = () => {
     setShowDropdown(!showDropdown);
-    console.log("Dropdown Open", showDropdown);
+    // console.log("Dropdown Open", showDropdown);
   };
 
   return (

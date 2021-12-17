@@ -16,7 +16,7 @@
   "ignorePatterns": ["**/*.js", "**/*.jsx"],
   "parser": "@typescript-eslint/parser",
   "plugins": [
-    "@typescript-eslint",
+    "@typescript-eslint/eslint-plugin",
     "@next/eslint-plugin-next" // https://github.com/vercel/next.js/blob/canary/packages/eslint-plugin-next/lib/index.js
   ],
   "extends": [

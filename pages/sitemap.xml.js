@@ -65,8 +65,8 @@ export const getServerSideProps = async ({ res }) => {
   res.setHeader("Content-Type", "text/xml");
   res.write(sitemap);
   res.end();
-  console.log("Static SiteMaps", staticPages);
-  console.log("Some Dynamic SiteMaps", categories);
+  // console.log("Static SiteMaps", staticPages);
+  // console.log("Some Dynamic SiteMaps", categories);
   return {
     props: {},
   };
