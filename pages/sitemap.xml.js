@@ -15,14 +15,18 @@ export const getServerSideProps = async ({ res }) => {
     .readdirSync("pages")
     .filter((staticPage) => {
       return ![
+        // Add the page you don't wanna add to sitemaps
         "_app.tsx",
-        "_document.js",
+        "_document.tsx",
+        "test.tsx",
+        "[pageId].tsx",
+        "index.tsx",
         "_error.js",
         "sitemap.xml.js",
       ].includes(staticPage);
     })
     .map((staticPagePath) => {
-      return `${baseUrl}/${staticPagePath}`;
+      return `${baseUrl}/${staticPagePath.replace(/\.[^/.]+$/, "")}`;
     });
 
   const catData = await apolloClient.query({
@@ -33,6 +37,12 @@ export const getServerSideProps = async ({ res }) => {
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
         <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+                <url>
+                  <loc>${baseUrl}</loc>
+                  <lastmod>${new Date().toISOString()}</lastmod>
+                  <changefreq>monthly</changefreq>
+                  <priority>1.0</priority>
+                </url>
           ${staticPages
             .map((url) => {
               return `
@@ -65,7 +75,7 @@ export const getServerSideProps = async ({ res }) => {
   res.setHeader("Content-Type", "text/xml");
   res.write(sitemap);
   res.end();
-  // console.log("Static SiteMaps", staticPages);
+  console.log("Static SiteMaps", staticPages);
   // console.log("Some Dynamic SiteMaps", categories);
   return {
     props: {},
