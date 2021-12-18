@@ -66,7 +66,7 @@ export const NotionPage: React.FC<types.NotionPageProps> = ({ recordMap }) => {
         }}
         recordMap={recordMap}
         fullPage={true}
-        // darkMode={darkMode.value}
+        // darkMode={false}
         showTableOfContents={true}
         minTableOfContentsItems={3}
       />

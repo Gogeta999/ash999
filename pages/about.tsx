@@ -30,6 +30,7 @@ function About() {
               alt="Picture Of My Love"
               layout="fill"
               objectFit="cover"
+              priority
               className="rounded-full "
             />
           </div>
