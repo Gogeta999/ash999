@@ -22,7 +22,7 @@ export const getServerSideProps = async ({ res }) => {
       ].includes(staticPage);
     })
     .map((staticPagePath) => {
-      return `${baseUrl}/${staticPagePath}`;
+      return `${baseUrl}/${staticPagePath.replace(/\.[^/.]+$/, "")}`;
     });
 
   const catData = await apolloClient.query({
@@ -65,7 +65,7 @@ export const getServerSideProps = async ({ res }) => {
   res.setHeader("Content-Type", "text/xml");
   res.write(sitemap);
   res.end();
-  // console.log("Static SiteMaps", staticPages);
+  console.log("Static SiteMaps", staticPages);
   // console.log("Some Dynamic SiteMaps", categories);
   return {
     props: {},
