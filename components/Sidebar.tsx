@@ -34,11 +34,11 @@ export const Sidebar: React.FC<types.CategoriesProps> = ({ catData }) => {
         <button
           className={`${showSidebar ? "" : "hidden"} ${
             isDarkMode ? "bg-darkBG text-darkTxt" : ""
-          } positioned text-xs md:text-lg hover:text-evagreen `}
+          } positioned  hover:text-evagreen `}
           aria-label="Open"
           onMouseEnter={handleSidebar}
         >
-          <FaAngleDoubleRight />
+          <FaAngleDoubleRight className="SidebarIcon" />
         </button>
       ) : null}
       {hasMounted ? (
@@ -46,7 +46,7 @@ export const Sidebar: React.FC<types.CategoriesProps> = ({ catData }) => {
           <aside
             className={`${
               isDarkMode ? "bg-darkBG" : ""
-            } flex flex-col sticky top-0  overflow-y-auto h-5/6 md:h-screen  w-22 md:w-40 items-center space-y-10 z-30 pb-2.5 border-2 boder-evagreen`}
+            } flex flex-col  sticky top-0  overflow-y-auto h-full  w-22 md:w-40 items-center space-y-10 z-30 pb-2.5 border-2 border-evagreen`}
             onMouseLeave={handleSidebar}
           >
             <div className="text-xs md:text-lg py-2  transition duration-200 ease-in">

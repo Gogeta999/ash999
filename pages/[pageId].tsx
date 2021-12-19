@@ -65,7 +65,7 @@ export default function DynamicPage({
           content="For people can google to here ah, if they do require this blog"
         />
       </Head>
-      <main className="">
+      <main className="overflow-x-hidden overscroll-y-auto">
         <div className="flex ">
           <Navbar />
         </div>

@@ -18,7 +18,7 @@ export const Footbar: React.FC<{}> = ({}) => {
   const isDarkMode = darkMode.value;
 
   return (
-    <footer>
+    <footer className={`${isDarkMode ? "" : ""} border-t`}>
       {hasMounted ? (
         <div
           className={`${
@@ -43,7 +43,7 @@ export const Footbar: React.FC<{}> = ({}) => {
               <a
                 className={`${
                   isDarkMode ? "text-white" : ""
-                } p-2 cursor-pointer text-3xl  hover:text-blue-400`}
+                } p-2 cursor-pointer text-3xl  hover:text-twitterBlue`}
                 href={`https://twitter.com/666ash999`}
                 title={`Twitter @Ash999`}
                 target="_blank"
@@ -55,7 +55,7 @@ export const Footbar: React.FC<{}> = ({}) => {
               <a
                 className={`${
                   isDarkMode ? "text-white" : ""
-                } p-2 cursor-pointer text-3xl hover:text-pink-600`}
+                } p-2 cursor-pointer text-3xl hover:text-instagramPink`}
                 href={`https://www.instagram.com/win_ash999/`}
                 title={`Instagram @Win_Ash999`}
                 target="_blank"
