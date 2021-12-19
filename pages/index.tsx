@@ -8,7 +8,6 @@ import AllCategory_query from "../queries/allCategories.graphql";
 import { NotionAPI } from "notion-client";
 import gql from "graphql-tag";
 import { Footbar } from "../components/Footbar";
-import { Html } from "next/document";
 
 export const getStaticProps: GetStaticProps = async () => {
   try {

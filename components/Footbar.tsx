@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
 
-import { FaTwitter, FaGithub } from "react-icons/fa";
+import { FaTwitter, FaGithub, FaInstagram } from "react-icons/fa";
 
 import { IoSunnyOutline, IoMoonSharp } from "react-icons/io5";
 
@@ -50,6 +50,18 @@ export const Footbar: React.FC<{}> = ({}) => {
                 rel="noopener noreferrer"
               >
                 <FaTwitter />
+              </a>
+
+              <a
+                className={`${
+                  isDarkMode ? "text-white" : ""
+                } p-2 cursor-pointer text-3xl hover:text-pink-600`}
+                href={`https://www.instagram.com/win_ash999/`}
+                title={`Instagram @Win_Ash999`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram />
               </a>
 
               <a

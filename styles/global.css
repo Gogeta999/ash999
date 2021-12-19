@@ -18,8 +18,6 @@ body {
   overflow-x: hidden;
 }
 
-
-
 /* Avoid Overlay From Notion*/
 header {
   z-index: 30;
@@ -35,7 +33,6 @@ button.positioned {
   position: relative;
 }
 
-
 div {
   z-index: 1001;
 }
@@ -44,7 +41,7 @@ div.positioned {
 }
 
 #nprogress .bar {
-  background: #A2DA5A !important;
+  background: #a2da5a !important;
 }
 
 /* width */
@@ -61,7 +58,7 @@ div.positioned {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #A2DA5A;
+  background: #a2da5a;
   border-radius: 100vh;
   border: 3px solid #edf2f7;
 }

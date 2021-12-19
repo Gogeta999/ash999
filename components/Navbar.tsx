@@ -30,7 +30,7 @@ export const Navbar = () => {
   return (
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <header className="flex w-full flex-wrap bg-purple-600 bg-opacity-50 py-2.5 ">
+      <header className="flex w-screen flex-wrap bg-purple-600 bg-opacity-50 py-2.5  ">
         <Link href="/">
           <img
             src="/Ash999.svg"
@@ -86,7 +86,7 @@ export const Navbar = () => {
             </Modal>
 
             <Link href="/about">
-              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center  hover:bg-evagreen">
+              <a className="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center  hover:bg-evagreen mr-2">
                 Me
               </a>
             </Link>

@@ -37,14 +37,12 @@ function About() {
         </div>
 
         <div className="flex flex-row mx-auto">
-          <p className="text-xl font-bold">Ash999</p>
+          <p className="text-3xl font-bold">Ash999</p>
         </div>
         <div className="flex flex-col mx-auto">
-          <p className="text-base w-96">
-            So I'm Ash999, I'm a programmer as showing in{" "}
-            <a href="https://github.com/Gogeta999">Github</a>
-            blah blah blah blah blah blah blah blah blah blah blah blah blah
-            blah blah blah blah blah blah
+          <p className="text-sm md:text-xl m-2">
+            I'm Ash999, I'm a human and i will write something when i want to
+            write in this blog.
           </p>
         </div>
       </section>
