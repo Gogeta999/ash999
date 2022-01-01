@@ -66,7 +66,7 @@ export default function DynamicPage({
         />
       </Head>
       <main className="antialiased">
-        <Navbar />
+        <Navbar catData={catData} />
         <div className="flex">
           {/* <div className="absolute inset-0"> */}
           <Sidebar catData={catData} />
