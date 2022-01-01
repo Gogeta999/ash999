@@ -12,7 +12,6 @@ import { Footbar } from "../components/Footbar";
 export const getStaticProps: GetStaticProps = async () => {
   try {
     const apolloClient = initializeApollo();
-
     const categoryFetch = await apolloClient.query({
       query: gql`
         query {
@@ -42,7 +41,7 @@ export const getStaticProps: GetStaticProps = async () => {
       (category: { notionId: any }) => category.notionId
     );
 
-    const pageId = pageData + "";
+    const pageId = pageData.toString();
 
     const api = new NotionAPI();
     const recordMap = await api.getPage(pageId);
@@ -74,10 +73,10 @@ function Home({
           content="cQsyrhwamwGGMZZBoNgRkiRiMSyYP3R6eNWu2jPdRHQ"
         />
       </Head>
-      <main className="overflow-x-hidden overscroll-y-auto">
-        <Navbar />
+      <main className="antialiased">
+        <Navbar catData={catData} />
 
-        <div className="flex h-full">
+        <div className="flex">
           <Sidebar catData={catData} />
 
           <NotionPage recordMap={recordMap} />

@@ -59,7 +59,7 @@ export const getServerSideProps = async ({ res }) => {
               .map((category) => {
                 return `
               <url>
-                <loc>${baseUrl}/${category.name}-${category.notionId}</loc>
+                <loc>${baseUrl}/${category.notionId}</loc>
                 <lastmod>${category.lastModifiedTime}</lastmod>
                 <changefreq>monthly</changefreq>
                 <priority>1.0</priority>

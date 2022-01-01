@@ -2,7 +2,6 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import * as types from "../@types/types";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
-import { FaAngleDoubleRight } from "react-icons/fa";
 import useDarkMode from "use-dark-mode";
 
 export const Sidebar: React.FC<types.CategoriesProps> = ({ catData }) => {
@@ -14,14 +13,7 @@ export const Sidebar: React.FC<types.CategoriesProps> = ({ catData }) => {
 
   const isDarkMode = darkMode.value;
 
-  const [showSidebar, setShowSidebar] = useState(true);
-
-  const handleSidebar = () => {
-    setShowSidebar(!showSidebar);
-    // console.log("Sidebar Open", showSidebar);
-  };
-
-  const [showDropdown, setShowDropdown] = useState(true);
+  const [showDropdown, setShowDropdown] = useState(false);
 
   const handleDropdown = () => {
     setShowDropdown(!showDropdown);
@@ -30,24 +22,12 @@ export const Sidebar: React.FC<types.CategoriesProps> = ({ catData }) => {
 
   return (
     <>
-      {hasMounted ? (
-        <button
-          className={`${showSidebar ? "" : "hidden"} ${
-            isDarkMode ? "bg-darkBG text-darkTxt" : ""
-          } positioned  hover:text-evagreen `}
-          aria-label="Open"
-          onMouseEnter={handleSidebar}
-        >
-          <FaAngleDoubleRight className="SidebarIcon" />
-        </button>
-      ) : null}
-      {hasMounted ? (
-        <div className={`${showSidebar ? "hidden" : ""} `}>
+      <div className={`hidden md:block w-40`}>
+        {hasMounted ? (
           <aside
             className={`${
-              isDarkMode ? "bg-darkBG" : ""
-            } flex flex-col  sticky top-0  overflow-y-auto h-full  w-22 md:w-40 items-center space-y-10 z-30 pb-2.5 border-2 border-evagreen`}
-            onMouseLeave={handleSidebar}
+              isDarkMode ? "bg-darkBG border-evagreen" : ""
+            } flex flex-col  sticky top-0  overflow-y-auto h-full items-center space-y-10 z-30 pb-2.5 border-r-2`}
           >
             <div className="text-xs md:text-lg py-2  transition duration-200 ease-in">
               <p
@@ -63,7 +43,7 @@ export const Sidebar: React.FC<types.CategoriesProps> = ({ catData }) => {
                       : "hover:text-purple-600"
                   }`}
                   aria-label="Dropdown If have child"
-                  onMouseEnter={handleDropdown}
+                  onClick={handleDropdown}
                 >
                   <IoIosArrowDropdownCircle />
                 </button>
@@ -79,7 +59,7 @@ export const Sidebar: React.FC<types.CategoriesProps> = ({ catData }) => {
               >
                 <Link
                   href={{
-                    pathname: `/${category.name}-${category.notionId}`,
+                    pathname: `/${category.notionId}`,
                     query: {
                       pageId: category.notionId,
                       pageName: category.name,
@@ -114,8 +94,8 @@ export const Sidebar: React.FC<types.CategoriesProps> = ({ catData }) => {
               </div>
             ))}
           </aside>
-        </div>
-      ) : null}
+        ) : null}
+      </div>
     </>
   );
 };

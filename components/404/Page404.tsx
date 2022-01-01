@@ -3,7 +3,7 @@ import Link from "next/link";
 import * as React from "react";
 import * as types from "../../@types/types";
 
-export const Page404: React.FC<types.PageProps> = ({ site, pageId, error }) => {
+export const Page404: React.FC<types.PageProps> = ({ site }) => {
   const title = site?.name || "Page Not Found";
 
   return (
