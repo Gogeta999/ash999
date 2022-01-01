@@ -4,7 +4,7 @@ import * as types from "../@types/types";
 import { IoSearch } from "react-icons/io5";
 import Link from "next/link";
 
-export default function Search() {
+export default function Search({ onSubmit }: any) {
   //For Search Input And Changes
   const [searchValue, setSearchValue] = useState("");
 
@@ -20,8 +20,8 @@ export default function Search() {
   useEffect(() => {
     const delayDebounceFn = setTimeout(async () => {
       // console.log(searchValue);
-      setSearchAtive(true);
       if (searchValue.length) {
+        setSearchAtive(true);
         const notionFetch = await axios({
           method: "POST",
           headers: {
@@ -35,7 +35,7 @@ export default function Search() {
         // console.log("SearchRes----", searchValue, "----", notionSearchResults);
         setSearchAtive(false);
       }
-    }, 2000);
+    }, 1500);
 
     return () => clearTimeout(delayDebounceFn);
   }, [searchValue]);
@@ -88,13 +88,15 @@ export default function Search() {
                 <div className="w-5">
                   <img src={blog.icon?.file?.url} alt="" />
                 </div>
-                <Link
-                  href={{
-                    pathname: `/${title.plain_text}-${blog.id}`,
-                  }}
-                >
-                  <a>Include in {title.plain_text}</a>
-                </Link>
+                <button onClick={onSubmit}>
+                  <Link
+                    href={{
+                      pathname: `/${title.plain_text}-${blog.id}`,
+                    }}
+                  >
+                    <a>Include in {title.plain_text}</a>
+                  </Link>
+                </button>
               </div>
             ))}
           </div>

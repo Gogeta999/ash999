@@ -65,11 +65,9 @@ export default function DynamicPage({
           content="For people can google to here ah, if they do require this blog"
         />
       </Head>
-      <main className="overflow-x-hidden overscroll-y-auto">
-        <div className="flex ">
-          <Navbar />
-        </div>
-        <div className="flex h-full">
+      <main className="antialiased">
+        <Navbar />
+        <div className="flex">
           {/* <div className="absolute inset-0"> */}
           <Sidebar catData={catData} />
           {/* </div> */}
