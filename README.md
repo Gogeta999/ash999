@@ -1,4 +1,9 @@
-Here is my blog which use some api from my ash999_backend(Just Search Feature)
+# Ash999 Blog
+
+Here is my blog which use some api from my ash999_backend
+
+- Fetch Index and Category by [`ash999_blackend's`](https://github.com/Gogeta999/ash999_backend) GraphQL Like [`This`](https://api.ash999.xyz/graphql/)
+- Search Notion Content with [`ash999_blackend's`](https://github.com/Gogeta999/ash999_backend) RestAPI Like [`This`](https://api.ash999.xyz/blog/search)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
@@ -13,7 +18,6 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
 
 ## Learn More
 

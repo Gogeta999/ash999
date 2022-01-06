@@ -10,6 +10,10 @@ module.exports = {
         twitterBlue: { DEFAULT: "#1DA1F2" },
         instagramPink: { DEFAULT: "#C13584" },
       },
+      rotate: {
+        135: "135deg",
+        225: "225deg",
+      },
     },
   },
   variants: {

@@ -50,7 +50,7 @@ export const Navbar: React.FC<types.CategoriesProps> = ({ catData }) => {
 
   return (
     <>
-      <nav className="flex w-full flex-wrap bg-purple-600 bg-opacity-50 py-2.5 z-50 ">
+      <nav className="flex w-full flex-wrap bg-purple-600 bg-opacity-50 py-2.5 z-50 ease-in ">
         <button aria-label="Navbar Icon">
           <Link href="/">
             <img
@@ -63,15 +63,8 @@ export const Navbar: React.FC<types.CategoriesProps> = ({ catData }) => {
         </button>
 
         <div className=" ml-auto inline-flex">
-          {/* <button
-            className="p-3  hover:bg-white-300 lg:hidden text-white  hover:text-white outline-none"
-            aria-label="menu"
-            onClick={handleMenuClick}
-          >
-            <IoMenu />
-          </button> */}
           <button
-            className="text-white w-10 h-10 lg:hidden relative focus:outline-none"
+            className="text-white w-10 p-3 lg:hidden relative focus:outline-none"
             onClick={handleMenuClick}
           >
             <span className="sr-only">Open main menu</span>
@@ -79,7 +72,7 @@ export const Navbar: React.FC<types.CategoriesProps> = ({ catData }) => {
               <span
                 aria-hidden="true"
                 className={`${
-                  active ? "rotate-45" : "-translate-y-1.5"
+                  active ? "rotate-225" : "-translate-y-1.5"
                 } block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out`}
               />
               <span
@@ -91,7 +84,7 @@ export const Navbar: React.FC<types.CategoriesProps> = ({ catData }) => {
               <span
                 aria-hidden="true"
                 className={`${
-                  active ? "-rotate-45" : "translate-y-1.5"
+                  active ? "rotate-135" : "translate-y-1.5"
                 } block absolute h-0.5 w-5 bg-current transform transition duration-500 ease-in-out`}
               />
             </div>
