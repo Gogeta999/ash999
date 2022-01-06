@@ -90,6 +90,7 @@ export interface NotionPageProps {
 
 export interface CategoriesProps {
   catData?: CategoriesData;
+  onSubmit?: any;
 }
 export interface CategoriesData {
   allCategories: AllCategory[];
