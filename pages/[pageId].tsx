@@ -2,7 +2,6 @@ import type { InferGetStaticPropsType } from "next";
 import AllCategory_query from "../queries/allCategories.graphql";
 
 import { NotionAPI } from "notion-client";
-import dynamic from "next/dynamic";
 import { parsePageId } from "notion-utils";
 
 import React from "react";
@@ -26,7 +25,6 @@ export const getStaticProps = async (context: any) => {
     const rawPageId = context.params.pageId as string;
 
     // console.log("RawPageID", rawPageId);
-
     const pageId = parsePageId(rawPageId);
     // console.log("Parse PageID", pageId);
 

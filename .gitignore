@@ -1,7 +1,7 @@
 
 # Created by https://www.toptal.com/developers/gitignore/api/nextjs,node,linux,windows,vs
 # Edit at https://www.toptal.com/developers/gitignore?templates=nextjs,node,linux,windows,vs
-
+/pages/test.tsx
 ### Linux ###
 *~
 
