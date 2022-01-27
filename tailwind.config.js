@@ -17,6 +17,8 @@ module.exports = {
     },
   },
   variants: {
+    animation: ["responsive", "hover", "focus"],
+    transitionDelay: ["responsive", "hover", "focus"],
     extend: {
       backgroundColor: ["active"],
     },

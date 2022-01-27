@@ -25,7 +25,8 @@
     "pages/components/layout.js",
     "pages/_error.ts",
     "pages/api/cors.js",
-    "pages/404.tsx"
+    "pages/404.tsx",
+    "components/Carousel.tsx"
   ],
   "exclude": ["node_modules"]
 }

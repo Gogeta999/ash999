@@ -36,14 +36,18 @@ export const Footbar: React.FC<{}> = ({}) => {
               onClick={darkMode.toggle}
               title="Toggle dark mode"
             >
-              {isDarkMode ? <IoMoonSharp /> : <IoSunnyOutline />}
+              {isDarkMode ? (
+                <IoMoonSharp className="hover:animate-bounce" />
+              ) : (
+                <IoSunnyOutline className="hover:animate-bounce" />
+              )}
             </button>
 
             <div className="flex mx-auto text-center">
               <a
                 className={`${
                   isDarkMode ? "text-white" : ""
-                } p-2 cursor-pointer text-3xl  hover:text-twitterBlue`}
+                } p-2 cursor-pointer text-3xl  hover:text-twitterBlue `}
                 href={`https://twitter.com/666ash999`}
                 title={`Twitter @Ash999`}
                 target="_blank"

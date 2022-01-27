@@ -154,7 +154,7 @@ export const Navbar: React.FC<types.CategoriesProps> = ({ catData }) => {
             </Modal>
 
             {/* About Button */}
-            <Link href="/about">
+            <Link href="/me">
               <a className="lg:inline-flex lg:w-auto px-3 py-2 rounded text-white font-bold items-center justify-center  hover:bg-evagreen mr-2">
                 Me
               </a>
