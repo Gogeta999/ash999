@@ -5,6 +5,7 @@ import Modal from "react-modal";
 import { MobileCat } from "./MobileCategory";
 import Search from "./Searchbar";
 import * as types from "../@types/types";
+import Image from "next/image";
 
 Modal.setAppElement("#__next");
 
@@ -50,17 +51,18 @@ export const Navbar: React.FC<types.CategoriesProps> = ({ catData }) => {
 
   return (
     <>
-      <nav className="flex w-full flex-wrap bg-purple-600 bg-opacity-50 py-2.5 z-50 ease-in ">
-        <button aria-label="Navbar Icon">
-          <Link href="/">
-            <img
+      <nav className="flex h-fit w-full flex-wrap bg-purple-600 bg-opacity-50 p-1 z-50 ease-in ">
+        <Link href="/">
+          <div className=" relative   ml-4 h-12 w-32 cursor-pointer">
+            <Image layout="fill" src="/Ash999.svg" alt="Navbar Icon" />
+          </div>
+          {/* <img
               src="/Ash999.svg"
               alt="Navbar default icon"
               width="200"
               height="100"
-            />
-          </Link>
-        </button>
+            /> */}
+        </Link>
 
         <div className=" ml-auto inline-flex">
           <button
